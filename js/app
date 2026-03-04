@@ -15,6 +15,22 @@ en:document.getElementById("en").value,
 level:document.getElementById("level").value
 }
 
+
+function showWords(){
+
+const words = allWords()
+
+let html=""
+
+words.forEach(w=>{
+html+=`<p>${w.de} - ${w.es} (${w.level})</p>`
+})
+
+document.getElementById("vocabList").innerHTML=html
+
+}
+
+window.onload=showWords
 addUserWord(w)
 
 alert("Word saved locally")
