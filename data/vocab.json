@@ -19,3 +19,25 @@
     }
   ]
 }
+
+{
+ "entries":[
+
+ {"de":"essen","es":"comer","en":"eat","level":"A1"},
+ {"de":"trinken","es":"beber","en":"drink","level":"A1"},
+ {"de":"arbeiten","es":"trabajar","en":"work","level":"A1"},
+ {"de":"lernen","es":"aprender","en":"learn","level":"A1"},
+ {"de":"gehen","es":"ir","en":"go","level":"A1"},
+ {"de":"kommen","es":"venir","en":"come","level":"A1"},
+ {"de":"sehen","es":"ver","en":"see","level":"A1"},
+ {"de":"sprechen","es":"hablar","en":"speak","level":"A1"},
+ {"de":"lesen","es":"leer","en":"read","level":"A1"},
+ {"de":"schreiben","es":"escribir","en":"write","level":"A1"},
+
+ {"de":"der Vertrag","es":"contrato","en":"contract","level":"B1"},
+ {"de":"kündigen","es":"rescindir","en":"terminate","level":"B2"},
+ {"de":"der Vorteil","es":"ventaja","en":"advantage","level":"B1"},
+ {"de":"der Nachteil","es":"desventaja","en":"disadvantage","level":"B1"}
+
+ ]
+}
