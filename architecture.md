@@ -1,21 +1,12 @@
-{
-  "meta": {
-    "name": "LinguaLab German vocab"
-  },
-  "entries": [
-    {
-      "de": "der Vertrag",
-      "es": "el contrato",
-      "en": "contract",
-      "level": "B1",
-      "example": "Ich unterschreibe den Vertrag."
-    },
-    {
-      "de": "kündigen",
-      "es": "rescindir",
-      "en": "terminate",
-      "level": "B2",
-      "example": "Er kündigt seinen Job."
-    }
-  ]
-}
+
+LinguaLab roadmap
+
+Phase1
+- vocabulary
+- chatbot
+- search
+
+Phase2
+- flashcards
+- grammar
+- mobile app

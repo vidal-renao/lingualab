@@ -1,36 +1,26 @@
 
-let baseVocab = []
-let userVocab = []
+function chat(){
 
-async function initDB(){
-const res = await fetch("data/vocab.json")
-const data = await res.json()
-baseVocab = data.entries
+const msg=document.getElementById("chatInput").value
 
-userVocab = JSON.parse(localStorage.getItem("userVocab") || "[]")
+if(msg.startsWith("define:")){
+const q=msg.split(":")[1].trim()
+
+const r=searchVocab(q)[0]
+
+if(!r){
+document.getElementById("chatOutput").textContent="Word not found"
+return
 }
 
-function saveUser(){
-localStorage.setItem("userVocab",JSON.stringify(userVocab))
+document.getElementById("chatOutput").textContent=
+`DE: ${r.de}
+ES: ${r.es}
+EN: ${r.en}`
+
+return
 }
 
-function allWords(){
-return [...userVocab,...baseVocab]
+document.getElementById("chatOutput").textContent="Try: define: Vertrag"
+
 }
-
-function searchVocab(q){
-q=q.toLowerCase()
-
-return allWords().filter(w=>
-(w.de && w.de.toLowerCase().includes(q)) ||
-(w.es && w.es.toLowerCase().includes(q)) ||
-(w.en && w.en.toLowerCase().includes(q))
-)
-}
-
-function addUserWord(w){
-userVocab.push(w)
-saveUser()
-}
-
-initDB()
