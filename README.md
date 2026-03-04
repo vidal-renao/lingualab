@@ -1,39 +1,23 @@
-# 🌍 LinguaLab
 
-LinguaLab is an open language learning platform designed to help learners study vocabulary, grammar and real usage across multiple languages.
+# LinguaLab
 
-The project starts with **German vocabulary**, but the architecture is designed to support many languages.
+Open language learning platform.
 
----
+## Features
 
-## 🚀 Features
-
-- 📚 Vocabulary dictionary
-- 🔎 Fast word search
-- 🤖 Vocabulary chatbot
-- ➕ User word suggestions
-- 💾 Local vocabulary storage
-- 🌐 Multi-language architecture
-
----
-
-## 🧰 Tech Stack
-
-Current prototype:
-
-- HTML
-- CSS
-- JavaScript
+- Vocabulary search
 - JSON database
-- LocalStorage
+- Local user words
+- Chatbot dictionary
+- Multi-language architecture
 
-Future architecture:
+## Tech
 
-- Next.js frontend
-- PostgreSQL database
-- Mobile app (React Native / Flutter)
-- AI language assistant
+HTML
+CSS
+JavaScript
+JSON
 
----
+## Run
 
-## 📂 Project Structure
+Open index.html
