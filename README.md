@@ -1,26 +1,39 @@
+# 🌍 LinguaLab
 
-function chat(){
+LinguaLab is an open language learning platform designed to help learners study vocabulary, grammar and real usage across multiple languages.
 
-const msg=document.getElementById("chatInput").value
+The project starts with **German vocabulary**, but the architecture is designed to support many languages.
 
-if(msg.startsWith("define:")){
-const q=msg.split(":")[1].trim()
+---
 
-const r=searchVocab(q)[0]
+## 🚀 Features
 
-if(!r){
-document.getElementById("chatOutput").textContent="Word not found"
-return
-}
+- 📚 Vocabulary dictionary
+- 🔎 Fast word search
+- 🤖 Vocabulary chatbot
+- ➕ User word suggestions
+- 💾 Local vocabulary storage
+- 🌐 Multi-language architecture
 
-document.getElementById("chatOutput").textContent=
-`DE: ${r.de}
-ES: ${r.es}
-EN: ${r.en}`
+---
 
-return
-}
+## 🧰 Tech Stack
 
-document.getElementById("chatOutput").textContent="Try: define: Vertrag"
+Current prototype:
 
-}
+- HTML
+- CSS
+- JavaScript
+- JSON database
+- LocalStorage
+
+Future architecture:
+
+- Next.js frontend
+- PostgreSQL database
+- Mobile app (React Native / Flutter)
+- AI language assistant
+
+---
+
+## 📂 Project Structure
