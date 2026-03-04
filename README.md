@@ -1,39 +1,36 @@
-# 🌍 LinguaLab
 
-LinguaLab is an open language learning platform designed to help learners study vocabulary, grammar and real usage across multiple languages.
+let baseVocab = []
+let userVocab = []
 
-The project starts with **German vocabulary**, but the architecture is designed to support many languages.
+async function initDB(){
+const res = await fetch("data/vocab.json")
+const data = await res.json()
+baseVocab = data.entries
 
----
+userVocab = JSON.parse(localStorage.getItem("userVocab") || "[]")
+}
 
-## 🚀 Features
+function saveUser(){
+localStorage.setItem("userVocab",JSON.stringify(userVocab))
+}
 
-- 📚 Vocabulary dictionary
-- 🔎 Fast word search
-- 🤖 Vocabulary chatbot
-- ➕ User word suggestions
-- 💾 Local vocabulary storage
-- 🌐 Multi-language architecture
+function allWords(){
+return [...userVocab,...baseVocab]
+}
 
----
+function searchVocab(q){
+q=q.toLowerCase()
 
-## 🧰 Tech Stack
+return allWords().filter(w=>
+(w.de && w.de.toLowerCase().includes(q)) ||
+(w.es && w.es.toLowerCase().includes(q)) ||
+(w.en && w.en.toLowerCase().includes(q))
+)
+}
 
-Current prototype:
+function addUserWord(w){
+userVocab.push(w)
+saveUser()
+}
 
-- HTML
-- CSS
-- JavaScript
-- JSON database
-- LocalStorage
-
-Future architecture:
-
-- Next.js frontend
-- PostgreSQL database
-- Mobile app (React Native / Flutter)
-- AI language assistant
-
----
-
-## 📂 Project Structure
+initDB()
