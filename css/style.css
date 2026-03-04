@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinguaLab</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🌍 LinguaLab</h1>
+<p>Open language learning platform</p>
+</header>
+
+<section class="search">
+<input id="searchBox" placeholder="Search word (DE / ES / EN)">
+<button onclick="searchWord()">Search</button>
+</section>
+
+<section class="result">
+<pre id="result"></pre>
+</section>
+
+<section class="add">
+<h2>Add word (local)</h2>
+<input id="de" placeholder="Deutsch">
+<input id="es" placeholder="Español">
+<input id="en" placeholder="English">
+<select id="level">
+<option>A1</option>
+<option>A2</option>
+<option>B1</option>
+<option>B2</option>
+<option>C1</option>
+<option>C2</option>
+</select>
+<button onclick="addWord()">Save</button>
+</section>
+
+<section>
+<h2>Chatbot</h2>
+<input id="chatInput" placeholder="Type: define: Vertrag">
+<button onclick="chat()">Send</button>
+<pre id="chatOutput"></pre>
+</section>
+
+<script src="js/db.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
